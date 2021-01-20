@@ -1,0 +1,133 @@
+git
+Colin@LAPTOP-PUVQVEFA MINGW64 ~/Desktop/ELEC_3907/doorman (master)
+$ git fetch --all
+Fetching origin
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 217 bytes | 0 bytes/s, done.
+From https://github.com/adamheffernan/doorman
+ * [new branch]      master       -> origin/master
+ * [new branch]      Adam-Branch  -> origin/Adam-Branch
+ * [new branch]      AdamGBranch  -> origin/AdamGBranch
+ * [new branch]      ColinsBranch -> origin/ColinsBranch
+ * [new branch]      JoesBranch   -> origin/JoesBranch
+ * [new branch]      PapasBranch  -> origin/PapasBranch
+
+Colin@LAPTOP-PUVQVEFA MINGW64 ~/Desktop/ELEC_3907/doorman (master)
+$ git checkout -b ColinsBranch origin/ColinsBranch
+Switched to a new branch 'ColinsBranch'
+Branch 'ColinsBranch' set up to track remote branch 'ColinsBranch' from 'origin'.
+
+Colin@LAPTOP-PUVQVEFA MINGW64 ~/Desktop/ELEC_3907/doorman (ColinsBranch)
+$ git status
+On branch ColinsBranch
+Your branch is up to date with 'origin/ColinsBranch'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        WOWitsGIT.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Colin@LAPTOP-PUVQVEFA MINGW64 ~/Desktop/ELEC_3907/doorman (ColinsBranch)
+$ git add.
+git: 'add.' is not a git command. See 'git --help'.
+
+The most similar command is
+        add
+
+Colin@LAPTOP-PUVQVEFA MINGW64 ~/Desktop/ELEC_3907/doorman (ColinsBranch)
+$ git add .
+
+Colin@LAPTOP-PUVQVEFA MINGW64 ~/Desktop/ELEC_3907/doorman (ColinsBranch)
+$ git status
+On branch ColinsBranch
+Your branch is up to date with 'origin/ColinsBranch'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   WOWitsGIT.txt
+
+
+Colin@LAPTOP-PUVQVEFA MINGW64 ~/Desktop/ELEC_3907/doorman (ColinsBranch)
+$ git commit -m
+error: switch `m' requires a value
+
+Colin@LAPTOP-PUVQVEFA MINGW64 ~/Desktop/ELEC_3907/doorman (ColinsBranch)
+$ git commit -m "First file added, ColinsBranch"
+[ColinsBranch b44704a] First file added, ColinsBranch
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 WOWitsGIT.txt
+
+Colin@LAPTOP-PUVQVEFA MINGW64 ~/Desktop/ELEC_3907/doorman (ColinsBranch)
+$ git push
+remote: Permission to adamheffernan/doorman.git denied to ExhaustedGolem.
+fatal: unable to access 'https://github.com/adamheffernan/doorman.git/': The requested URL returned error: 403
+
+Colin@LAPTOP-PUVQVEFA MINGW64 ~/Desktop/ELEC_3907/doorman (ColinsBranch)
+$ git push
+remote: Permission to adamheffernan/doorman.git denied to ExhaustedGolem.
+fatal: unable to access 'https://github.com/adamheffernan/doorman.git/': The requested URL returned error: 403
+
+Colin@LAPTOP-PUVQVEFA MINGW64 ~/Desktop/ELEC_3907/doorman (ColinsBranch)
+$ git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 292 bytes | 146.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/adamheffernan/doorman.git
+   4f2f621..b44704a  ColinsBranch -> ColinsBranch
+
+Colin@LAPTOP-PUVQVEFA MINGW64 ~/Desktop/ELEC_3907/doorman (ColinsBranch)
+$ git merge master
+merge: master - not something we can merge
+
+Did you mean this?
+        origin/master
+
+Colin@LAPTOP-PUVQVEFA MINGW64 ~/Desktop/ELEC_3907/doorman (ColinsBranch)
+$ git origin/master
+git: 'origin/master' is not a git command. See 'git --help'.
+
+Colin@LAPTOP-PUVQVEFA MINGW64 ~/Desktop/ELEC_3907/doorman (ColinsBranch)
+$ git merge origin/master
+Already up to date.
+
+Colin@LAPTOP-PUVQVEFA MINGW64 ~/Desktop/ELEC_3907/doorman (ColinsBranch)
+$ git switch master
+Switched to a new branch 'master'
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+Your branch is up to date with 'origin/master'.
+
+Colin@LAPTOP-PUVQVEFA MINGW64 ~/Desktop/ELEC_3907/doorman (master)
+$ git pull
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 2 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 881 bytes | 2.00 KiB/s, done.
+From https://github.com/adamheffernan/doorman
+   4f2f621..f70367a  master      -> origin/master
+   4f2f621..92e420e  Adam-Branch -> origin/Adam-Branch
+git switch Updating 4f2f621..f70367a
+Fast-forward
+ WOWitsGIT.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 WOWitsGIT.txt
+Colin
+Colin@LAPTOP-PUVQVEFA MINGW64 ~/Desktop/ELEC_3907/doorman (master)
+$ git switch ColinsBranch
+Switched to branch 'ColinsBranch'
+Your branch is up to date with 'origin/ColinsBranch'.
+git
+Colin@LAPTOP-PUVQVEFA MINGW64 ~/Desktop/ELEC_3907/doorman (ColinsBranch)
+$ git rebase ColinsBranch
+Current branch ColinsBranch is up to date.
+
+Colin@LAPTOP-PUVQVEFA MINGW64 ~/Desktop/ELEC_3907/doorman (ColinsBranch)
+$ git rebase master
+Successfully rebased and updated refs/heads/ColinsBranch.
+
